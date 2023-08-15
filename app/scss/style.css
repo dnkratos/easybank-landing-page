@@ -306,12 +306,13 @@ a:hover {
   color: hsl(233, 26%, 24%);
   padding: 1rem;
   text-align: center;
+  transition: background 0.4s ease-in-out;
 }
 .header__menu a:not(:last-child) {
   margin-bottom: 1.6rem;
 }
 .header__menu a:hover {
-  background: red;
+  background: hsl(0, 0%, 96%);
 }
 .header__menu.hidden {
   display: none;
