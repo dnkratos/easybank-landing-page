@@ -1,0 +1,60 @@
+.article {
+    background-color: $lightGray;
+    text-align: start;
+
+    @include breakpoint-up(medium) {
+        text-align: start;
+    }
+    &__item {
+        background-color: $white;
+        box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.075);
+        border-radius: 5px;
+        overflow: hidden;
+        display: block;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__img {
+        height: 20rem;
+    }
+    &__img img {
+        // height: 20rem;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    &__textbox {
+        padding: 3rem 3rem 3rem 4rem;
+
+        @include breakpoint-up(medium) {
+            padding: 3rem 2.5rem;
+        }
+    }
+
+    &__author {
+        color: $grayishBlue;
+        font-size: $font-sm;
+        margin-bottom: 1.4rem;
+    }
+
+    &__title {
+        font-size: $font-med;
+        line-height: 1.2;
+
+        margin-bottom: 0.8rem;
+
+        color: $darkBlue;
+    }
+
+    &__description {
+        font-size: 1.25rem;
+        color: $grayishBlue;
+        line-height: 1.6;
+    }
+}

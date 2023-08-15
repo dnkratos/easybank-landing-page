@@ -1,0 +1,88 @@
+.hero {
+    background-color: $lightGray;
+    @include breakpoint-up(large) {
+        .container {
+            align-items: center;
+            display: flex;
+        }
+
+        // flex-direction: row-reverse;
+    }
+    &__image {
+        position: relative;
+        background-image: url("/images/bg-intro-mobile.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 28rem;
+
+        @include breakpoint-up(medium) {
+            min-height: 40rem;
+        }
+        @include breakpoint-up(large) {
+            flex: 3;
+            order: 2;
+            min-height: 65rem;
+            background-image: none;
+            // background-image: url("/images/bg-intro-desktop.svg");
+            // background-position: left center;
+        }
+
+        &::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 10;
+            background-image: url("/images/image-mockups.png");
+
+            // background-size: 94%;
+
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            @include breakpoint-up(medium) {
+                background-size: 53%;
+            }
+            @include breakpoint-up(large) {
+                width: 120%;
+                height: 122%;
+                background-position: center 120%;
+                left: 22%;
+                background-size: 94%;
+            }
+        }
+
+        &::after {
+            @include breakpoint-up(medium) {
+                background-position: center 64%;
+            }
+            @include breakpoint-up(large) {
+                content: "";
+                height: 100%;
+                width: 150%;
+                background-size: 122%;
+                background-position: 0% 83%;
+                position: absolute;
+
+                z-index: 9;
+                background-image: url("/images/bg-intro-desktop.svg");
+
+                background-size: 115%;
+                background-repeat: no-repeat;
+                background-position: center bottom;
+            }
+        }
+    }
+
+    &__text {
+        margin: 6rem 0;
+        text-align: center;
+        @include breakpoint-up(large) {
+            flex: 2;
+            order: 1;
+            text-align: start;
+        }
+
+        
+    }
+}
