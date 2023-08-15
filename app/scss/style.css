@@ -443,6 +443,8 @@ a:hover {
 }
 .feature__title {
   margin: 2.6rem 0;
+  color: hsl(233, 26%, 24%);
+  font-size: 2rem;
 }
 .feature__description {
   font-size: 1.4rem;
